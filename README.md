@@ -36,12 +36,7 @@ Install:
 Start PostgreSQL using Docker:
 
 ```bash
-docker run --name dmi-postgres \
--e POSTGRES_USER=<username> \
--e POSTGRES_PASSWORD=<password> \
--e POSTGRES_DB=<database-name> \
--p 5432:5432 \
--d postgres
+docker run --name vudp-postgres-db -e POSTGRES_USER=vudp-user -e POSTGRES_PASSWORD=placeholder -e POSTGRES_DB=vudp -p 5434:5432 -v pgdata:/var/lib/postgresql/data -d postgres:17
 ```
 ## 2. Start the server
 
